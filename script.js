@@ -30,3 +30,26 @@ function closemenu(){
 /***********************CONTACT FORM******************* */
 
 
+function sendMail(){
+    var params={
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+
+    const serviceID = "service_8ivk16p";
+const templateID = "template_yja8nnz";
+
+emailjs.send(serviceID, templateID, params)
+.then((res) =>{
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    console.log(res);
+    alert("Your message sent succesfully")
+})
+.catch((err) >= console.log(err));
+}
+
