@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport", content="width-device-width, initial-scale = 1.0">
         <meta http-equiv="X-UA-Compatible", content="IE = edge">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../static/style.css">
 
         <script src="https://kit.fontawesome.com/902a6c5eb1.js" crossorigin="anonymous"></script>
 
@@ -19,10 +19,10 @@
         <div id="header">
             <div class="container">
                 <nav>
-                    <img src="images/Black___White_Modern_Minimalist_Data_Analyst_LinkedIn_Banner__1_-removebg-preview.png" class="logo">
+                    <img src="../static/images/Black___White_Modern_Minimalist_Data_Analyst_LinkedIn_Banner__1_-removebg-preview.png" class="logo">
 
                     <ul id="sidemenu">
-                        <li><a href="profile.html">Home</a></li>
+                        <li><a href="#index.html">Home</a></li>
                         <li><a href="#About">About</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
@@ -32,62 +32,62 @@
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
-                    <h1 class="wel">Welcome to Exploratory Data Analysis</h1>
+                    <h1 class="wel">Welcome to Machine Learning Technique</h1>
                 </div>
 
             </div>
         </div>
 
         <section id="intro">
-            <h1>Exploratory Data Analysis (EDA)</h1>
-            <p>Unveiling patterns, trends, and insights through data exploration.</p>
-            <img src="images/eda-banner.png" alt="EDA Banner" class="banner-img">
+
+            <h1>Machine Learning</h1>
+            <p>Leveraging data to make predictions and discover insights through machine learning models.</p>
+            <img src="../static/images/ml-banner.png" alt="Machine Learning Banner" class="banner-img">
         </section>
-
-
-        <section id="why-eda">
-            <h2>Why is EDA Important?</h2>
+        
+        <section id="why-ml">
+            <h2>Why is Machine Learning Important?</h2>
             <ul>
-                <li>Understand your data before making decisions.</li>
-                <li>Identify missing or incorrect data.</li>
-                <li>Discover hidden patterns and relationships.</li>
-                <li>Prepare data for advanced analysis or modeling.</li>
-            </ul>
-        </section>
-
-
-        <section id="eda-steps">
-            <h2>Steps in Exploratory Data Analysis</h2>
-            <ol>
-                <li><b>Data Cleaning:</b> Handle missing or inconsistent data.</li>
-                <li><b>Data Visualization:</b> Use charts to uncover patterns.</li>
-                <li><b>Descriptive Statistics:</b> Summarize data characteristics.</li>
-                <li><b>Hypothesis Testing:</b> Explore relationships between variables.</li>
-            </ol>
-        </section>
-
-
-        <section id="examples">
-            <h2>Interactive Examples</h2>
-            <p class="eda-steps">Explore real-life EDA use cases:</p>
-            <ul>
-                <li><a href="visualizations/sales-analysis.html">Sales Analysis</a></li>
-                <li><a href="visualizations/churn-analysis.html">Customer Churn Analysis</a></li>
-                <li><a href="visualizations/market-trends.html">Market Trends</a></li>
-            </ul>
-        </section>
-
-        <!---------TOOLS AND TECH--------------->
-        <section id="why-eda">
-            <h2>Tools and Techniques</h2>
-            <p>Some tools and techniques I use for EDA include:</p>
-            <ul>
-                <li><b>Python Libraries:</b> Pandas, NumPy, Matplotlib, Seaborn</li>
-                <li><b>SQL: </b>For querying and summarizing data</li>
-                <li><b>Visualization Tools:</b> Tableau, Power BI</li>
+                <li>Make data-driven predictions and decisions.</li>
+                <li>Identify patterns in complex datasets.</li>
+                <li>Improve business processes through automation and efficiency.</li>
+                <li>Uncover hidden insights and relationships that traditional methods cannot.</li>
             </ul>
         </section>
         
+        <section id="ml-steps">
+            <h2>Steps in Machine Learning</h2>
+            <ol>
+                <li><b>Data Preprocessing:</b> Clean and transform data into a usable format.</li>
+                <li><b>Model Training:</b> Use algorithms to train models on historical data.</li>
+                <li><b>Model Evaluation:</b> Evaluate model performance using metrics like accuracy and precision.</li>
+                <li><b>Model Deployment:</b> Deploy models for real-time predictions or analysis.</li>
+            </ol>
+        </section>
+        
+        <section id="examples">
+            <h2>Interactive Examples</h2>
+            <p class="ml-steps">Explore real-life Machine Learning use cases:</p>
+            <ul>
+                <li><a href="models/heart-disease-prediction.html">Heart Disease Prediction</a></li>
+                <li><a href="models/churn-prediction.html">Customer Churn Prediction</a></li>
+                <li><a href="models/market-demand-prediction.html">Market Demand Prediction</a></li>
+            </ul>
+        </section>
+        
+        <!---------TOOLS AND TECH--------------->
+        
+        <section id="tools-tech">
+            <h2>Tools and Techniques</h2>
+            <p>Some tools and techniques I use for Machine Learning include:</p>
+            <ul>
+                <li><b>Programming Languages:</b> Python, R</li>
+                <li><b>Libraries and Frameworks:</b> Scikit-learn, TensorFlow, Keras, XGBoost</li>
+                <li><b>SQL:</b> For querying and summarizing data</li>
+                <li><b>Data Preprocessing Tools:</b> Pandas, NumPy</li>
+                <li><b>Visualization Tools:</b> Matplotlib, Seaborn, Tableau</li>
+            </ul>
+        </section>
         
         
         
@@ -162,7 +162,7 @@
                 <h1 class="sub-title">My Work</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="images/house.jpeg" >
+                        <img src="../static/images/house.jpeg" >
                         <div class="layer">
                             <h3>Real-Estate-Price-Prediction-with-Linear-Regression</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -171,7 +171,7 @@
                     </div>
 
                     <div class="work">
-                        <img src="images/overview-Titanic.webp"  >
+                        <img src="../static/images/overview-Titanic.webp"  >
                         <div class="layer">
                             <h3>Logistic Regression prediction and analysis with Titanic dataset</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -180,7 +180,7 @@
                     </div>
 
                     <div class="work">
-                        <img src="images/customer seg img.jpeg" >
+                        <img src="../static/images/customer seg img.jpeg" >
                         <div class="layer">
                             <h3>Customer-Segmentation-Analysis</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -189,7 +189,7 @@
                     </div>
 
                     <div class="work">
-                        <img src="images/survey BI.png"  >
+                        <img src="../static/images/survey BI.png"  >
                         <div class="layer">
                             <h3>Data Professional Survey Breakdown - Power BI Visualization</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -198,7 +198,7 @@
                     </div>
 
                     <div class="work">
-                        <img src="images/road died.jpg=s800" >
+                        <img src="../static/images/road died.jpg=s800" >
                         <div class="layer">
                             <h3>Road-Accident-Dashboard In Excel</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -207,7 +207,7 @@
                     </div>
 
                     <div class="work">
-                        <img src="images/tableau_reporting.png" >
+                        <img src="../static/images/tableau_reporting.png" >
                         <div class="layer">
                             <h3>World-Happiness-in-Tableau</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -216,7 +216,7 @@
                     </div>
 
                     <div class="work">
-                        <img src="images/Predictive-Analytics-in-E-commerce.jpg" >
+                        <img src="../static/images/Predictive-Analytics-in-E-commerce.jpg" >
                         <div class="layer">
                             <h3>E-commerce-customer-analysis-and-prediction</h3>
                             <p>This analysis analyse customer behavior </p>
@@ -250,7 +250,7 @@
                                         
                          
                         </div>
-                        <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
+                        <a href="../static/images/CV.pdf" download class="btn btn2">Download CV</a>
                     </div>
                     <div class="contact-right">
                         <form>
@@ -271,6 +271,6 @@
 
 
 
-        <script src="script.js"></script>
+        <script src="../static/script.js"></script>
     </body>
 </html>
