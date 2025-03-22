@@ -47,6 +47,8 @@ function sendMail() {
     const serviceID = "service_8ivk16p"; 
     const templateID = "template_yja8nnz"; 
 
+
+
     emailjs.send(serviceID, templateID, params)
         .then((res) => {
             console.log("SUCCESS", res.status, res.text);
@@ -63,3 +65,16 @@ function sendMail() {
             alert("There was an error sending your message. Please try again later.");
         });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
