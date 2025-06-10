@@ -168,7 +168,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// ... (previous code remains unchanged)
+// ...other JS...
+// MLOps Pipeline Scroll Animation
+document.addEventListener("DOMContentLoaded", function () {
+    // Animate the dot when the pipeline is in view
+    const section = document.getElementById('mlops-pipeline');
+    const dot = document.getElementById('mlops-flow-dot');
+    let pipelinePlayed = false;
+    function triggerPipelineAnimation() {
+        if (!section || !dot || pipelinePlayed) return;
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.7 && rect.bottom > 0) {
+            dot.classList.remove('active');
+            // Restart animation by forcing reflow
+            void dot.offsetWidth;
+            dot.classList.add('active');
+            pipelinePlayed = true;
+            setTimeout(() => { pipelinePlayed = false; }, 8000); // allow replay after a delay
+        }
+    }
+    window.addEventListener('scroll', triggerPipelineAnimation, { passive: true });
+    // Optionally: replay animation when the section comes back into view
+});
+
+// ...rest of script.js...
+
+
 
 // Sophisticated contact form validation & enhanced UX
 document.addEventListener("DOMContentLoaded", function () {
