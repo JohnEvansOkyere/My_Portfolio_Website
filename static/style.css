@@ -1210,6 +1210,296 @@ nav .fa-solid { display: none; font-size: 24px; cursor: pointer; }
 
 
 
+/* --- Case Studies & Success Stories Section --- */
+.case-studies-section {
+    background: linear-gradient(100deg, #191927 90%, #ff004f 120%);
+    padding: 70px 0 55px 0;
+    box-shadow: 0 2px 28px #ff004f14;
+}
+.section-title {
+    font-size: 2.1rem;
+    color: #ffe600;
+    font-weight: 900;
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: .3px;
+}
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.case-study-card {
+    background: #23264a;
+    border-radius: 14px;
+    box-shadow: 0 2px 18px #ff004f17;
+    padding: 22px 18px 26px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.22s, transform 0.22s;
+    position: relative;
+    min-height: 360px;
+}
+.case-study-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    box-shadow: 0 1.5px 7px #ffe60018;
+}
+.case-study-card h3 {
+    color: #ffe600;
+    font-size: 1.18rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+    text-align: center;
+}
+.case-study-card p {
+    color: #eaeaea;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    text-align: center;
+}
+.case-study-btn {
+    text-decoration: none;
+    background: #ff004f;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 22px;
+    padding: 8px 18px;
+    margin-top: auto;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: 0 2px 8px #ffe60044;
+    display: inline-block;
+}
+.case-study-btn:hover {
+    background: #ffe600;
+    color: #ff004f;
+}
+
+/* --- Case Study Detail Page Styles --- */
+.case-detail-header {
+    background: linear-gradient(100deg, #191927 80%, #ff004f 100%);
+    padding: 65px 0 34px 0;
+    text-align: center;
+    box-shadow: 0 6px 28px #ff004f11;
+}
+.case-detail-header h1 {
+    color: #ffe600;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+.case-detail-header p {
+    color: #fff;
+    font-size: 1.14rem;
+    opacity: 0.93;
+}
+
+.case-detail-body {
+    max-width: 730px;
+    margin: 0 auto;
+    background: #23264a;
+    border-radius: 18px;
+    box-shadow: 0 2px 18px #ff004f18;
+    padding: 38px 22px 44px 22px;
+    margin-top: -24px;
+    margin-bottom: 50px;
+}
+.case-detail-body h2 {
+    color: #ff004f;
+    font-size: 1.3rem;
+    margin-top: 26px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.case-detail-body ul {
+    color: #e3e3e3;
+    font-size: 1.04rem;
+    padding-left: 24px;
+    margin-bottom: 8px;
+}
+.case-img {
+    width: 100%;
+    max-width: 540px;
+    border-radius: 11px;
+    margin: 13px auto 21px auto;
+    display: block;
+    box-shadow: 0 2px 18px #ffe60022;
+}
+.testimonial {
+    background: #ffe60022;
+    border-left: 4px solid #ff004f;
+    color: #ff004f;
+    font-size: 1.06rem;
+    font-style: italic;
+    margin: 30px 0 10px 0;
+    padding: 13px 20px 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #ff004f12;
+}
+.case-detail-body .btn {
+    display: inline-block;
+    margin-top: 32px;
+    background: #ffe600;
+    color: #ff004f;
+    font-weight: 800;
+    border-radius: 22px;
+    padding: 10px 22px;
+    text-decoration: none;
+    box-shadow: 0 1.5px 7px #ffe60018;
+    transition: background 0.19s, color 0.19s;
+}
+.case-detail-body .btn:hover {
+    background: #ff004f;
+    color: #ffe600;
+}
+
+/* Responsive for Case Studies */
+@media (max-width: 900px) {
+    .case-detail-body { padding: 25px 6vw 30px 6vw;}
+    .case-studies-grid { gap: 18px; }
+}
+@media (max-width: 600px) {
+    .case-studies-section { padding: 44px 0 30px 0;}
+    .section-title { font-size: 1.4rem;}
+    .case-detail-header { padding: 32px 0 16px 0;}
+    .case-detail-header h1 { font-size: 1.1rem;}
+    .case-detail-body { padding: 18px 2vw 22px 2vw; }
+    .case-img { max-width: 98vw; }
+}
+
+
+
+/* --- Case Study Detail Page Styles (for case-ecommerce.html and similar) --- */
+.case-detail-header {
+    background: linear-gradient(100deg, #191927 80%, #ff004f 100%);
+    padding: 65px 0 34px 0;
+    text-align: center;
+    box-shadow: 0 6px 28px #ff004f11;
+}
+.case-detail-header h1 {
+    color: #ffe600;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+.case-detail-header p {
+    color: #fff;
+    font-size: 1.14rem;
+    opacity: 0.93;
+}
+
+.case-detail-body {
+    max-width: 730px;
+    margin: 0 auto;
+    background: #23264a;
+    border-radius: 18px;
+    box-shadow: 0 2px 18px #ff004f18;
+    padding: 38px 22px 44px 22px;
+    margin-top: -24px;
+    margin-bottom: 50px;
+}
+.case-detail-body h2 {
+    color: #ff004f;
+    font-size: 1.3rem;
+    margin-top: 26px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.case-detail-body ul {
+    color: #e3e3e3;
+    font-size: 1.04rem;
+    padding-left: 24px;
+    margin-bottom: 8px;
+}
+.case-detail-body p {
+    color: #e3e3e3;
+    font-size: 1.06rem;
+    margin-bottom: 10px;
+}
+.case-img {
+    width: 100%;
+    max-width: 540px;
+    border-radius: 11px;
+    margin: 13px auto 21px auto;
+    display: block;
+    box-shadow: 0 2px 18px #ffe60022;
+}
+.testimonial {
+    background: #ffe60022;
+    border-left: 4px solid #ff004f;
+    color: #ff004f;
+    font-size: 1.06rem;
+    font-style: italic;
+    margin: 30px 0 10px 0;
+    padding: 13px 20px 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #ff004f12;
+}
+.case-detail-body .btn {
+    display: inline-block;
+    margin-top: 32px;
+    background: #ffe600;
+    color: #ff004f;
+    font-weight: 800;
+    border-radius: 22px;
+    padding: 10px 22px;
+    text-decoration: none;
+    box-shadow: 0 1.5px 7px #ffe60018;
+    transition: background 0.19s, color 0.19s;
+}
+.case-detail-body .btn:hover {
+    background: #ff004f;
+    color: #ffe600;
+}
+
+/* Responsive for Case Study Detail */
+@media (max-width: 900px) {
+    .case-detail-body { padding: 25px 6vw 30px 6vw;}
+}
+@media (max-width: 600px) {
+    .case-detail-header { padding: 32px 0 16px 0;}
+    .case-detail-header h1 { font-size: 1.1rem;}
+    .case-detail-body { padding: 18px 2vw 22px 2vw; }
+    .case-img { max-width: 98vw; }
+}
+
+
+
+.demo-btn {
+  background: #ffe600;
+  color: #ff004f;
+  font-weight: 700;
+  border-radius: 22px;
+  padding: 7px 18px;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 2px 8px #ffe60044;
+  transition: background 0.18s, color 0.18s;
+}
+.demo-btn:hover { background: #ff004f; color: #ffe600; }
+.demo-iframe {
+  width: 100%;
+  min-height: 380px;
+  border-radius: 14px;
+  border: none;
+  margin-top: 18px;
+  box-shadow: 0 2px 14px #ff004f22;
+}
+
+
+
+
+
+
+
 /* MLOps Pipeline Visual Section */
 .mlops-pipeline-section {
     padding: 82px 0 64px 0;
