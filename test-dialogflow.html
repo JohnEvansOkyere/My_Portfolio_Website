@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogflow Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+    <!-- Dialogflow Messenger -->
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Dialogflow Widget Test</h1>
+        <div id="status" class="status">Checking Dialogflow widget...</div>
+        
+        <p>This is a simple test page to verify if the Dialogflow widget loads correctly.</p>
+        <p>If you can see the chat widget in the bottom right corner, it's working!</p>
+        
+        <!-- Dialogflow Chatbot -->
+        <df-messenger
+            intent="WELCOME"
+            chat-title="JohnEvansOkyere"
+            agent-id="68109975-3fce-4a76-81fb-65ec81a4cea6"
+            language-code="en"
+        ></df-messenger>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusDiv = document.getElementById('status');
+            const dfMessenger = document.querySelector('df-messenger');
+            
+            if (dfMessenger) {
+                statusDiv.textContent = 'Dialogflow widget found in DOM';
+                statusDiv.className = 'status success';
+                
+                // Check if widget loads properly
+                setTimeout(() => {
+                    if (dfMessenger.shadowRoot) {
+                        statusDiv.textContent = '✅ Dialogflow widget loaded successfully!';
+                        statusDiv.className = 'status success';
+                    } else {
+                        statusDiv.textContent = '⚠️ Dialogflow widget may need more time to initialize';
+                        statusDiv.className = 'status error';
+                    }
+                }, 3000);
+            } else {
+                statusDiv.textContent = '❌ Dialogflow widget not found in DOM';
+                statusDiv.className = 'status error';
+            }
+        });
+    </script>
+</body>
+</html> 

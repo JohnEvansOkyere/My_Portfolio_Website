@@ -1,518 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>John Evans Okyere | Portfolio</title>
+    <!-- Meta tags for SEO and responsive design -->
+    <title>John Evans Okyere - AI/ML Engineer & Data Scientist</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Google Fonts for better typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="AI/ML Engineer and Data Scientist specializing in machine learning, data visualization, and AI chatbot development">
+    
+    <!-- External CSS and Font Awesome for icons -->
     <link rel="stylesheet" href="static/style.css">
-    <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/902a6c5eb1.js"></script>
-    <!-- Dialogflow Messenger -->
-    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Google Analytics tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
-    <!-- HEADER/HERO SECTION -->
- <!-- ...above content remains unchanged... -->
-<div id="header">
-    <div class="header-bg">
-        <div class="header-shape"></div>
-        <div class="header-shape2"></div>
-    </div>
-    <div class="container header-container">
-        <nav class="navbar-modern">
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar-modern">
         <div class="navbar-brand">
-            <img src="images/banner.png" class="logo" alt="Logo">
+            <!-- Logo and brand name -->
+            <img src="static/images/Black___White_Modern_Minimalist_Data_Analyst_LinkedIn_Banner__1_-removebg-preview.png" class="logo" alt="John Evans Okyere Logo">
             <span class="navbar-title">John Evans Okyere</span>
         </div>
+        
+        <!-- Navigation menu items -->
         <ul id="sidemenu" class="navbar-links">
             <li><a href="#header" class="nav-link">Home</a></li>
             <li><a href="#About" class="nav-link">About</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
             <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
+            <!-- Close button for mobile menu -->
             <li class="navbar-close-btn">
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </li>
         </ul>
+        
+        <!-- Mobile menu toggle button -->
         <button class="navbar-toggle" id="navbar-toggle" aria-label="Open navigation menu">
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
-        <div class="header-main">
-            <div class="header-text animate__animated animate__fadeInDown">
-                <p class="subtitle">John Evans Okyere</p>
-                <h1>
-                    <span class="greeting">👋 Hi, I’m</span>
-                    <span class="highlight">Evans</span>
-                </h1>
-                <h2 class="header-typed">
-                    <span class="typed"></span>
-                </h2>
-                <p class="header-bio">
-                    AI/ML Engineer & Data Scientist passionate about transforming data into actionable stories, 
-                    building intelligent solutions and deploying them to the real world.
-                </p>
-                <a href="#contact" class="btn hero-btn">Let's Connect</a>
-                <div class="header-socials">
-                    <a href="https://github.com/JohnEvansOkyere" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com/Evansdatascient" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/L3UFDFW5H2DTM1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Hero Section with main introduction -->
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <!-- Main heading and title -->
+                <h1>Hi, I'm <span class="name">John Evans Okyere</span></h1>
+                <h2>AI/ML Engineer & Data Scientist</h2>
+                
+                <!-- Brief description of services -->
+                <p>Transforming data into actionable insights through machine learning, 
+                   AI chatbots, and advanced analytics. Building intelligent solutions 
+                   that drive business growth and innovation.</p>
+                
+                <!-- Call-to-action buttons -->
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn hero-btn">View My Work</a>
+                    <a href="#contact" class="btn hero-btn secondary">Get In Touch</a>
                 </div>
             </div>
-            <div class="header-photo-wrapper animate__animated animate__fadeInRight">
-                <img src="images/profile.png" alt="Evans photo" class="header-photo">
-                <div class="photo-glow"></div>
+            
+            <!-- Hero image -->
+            <div class="header-image">
+                <img src="static/images/IMG_1884-removebg-preview.png" alt="John Evans Okyere" class="hero-img">
             </div>
         </div>
     </div>
-    <!-- Dialogflow Chatbot -->
-<div id="chatbot-widget">
-    <button id="chatbot-fab" aria-label="Open chat with Evans AI Assistant">
-        <i class="fa-solid fa-comments"></i>
-    </button>
-    <div id="chatbot-frame-wrapper">
-        <iframe
-            id="chatbot-iframe"
-            src="https://chatbot-ui.johnevansokyere.com/?agentId=68109975-3fce-4a76-81fb-65ec81a4cea6&server=https://your-server-address.com"
-            title="Evans AI Chatbot"
-            allow="microphone; clipboard-read; clipboard-write"
-        ></iframe>
-        <button id="chatbot-close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-</div>
-<!-- ...rest of your HTML... -->
 
-    <!-- ABOUT SECTION -->
-<!-- ...other sections... -->
-<div id="About">
-    <div class="container about-modern-container">
-        <div class="about-modern-row">
-            <div class="about-modern-col-1">
-                <div class="about-avatar-wrapper">
-                    <img src="images/profile.png" alt="Evans Profile" class="about-avatar">
-                    <div class="about-avatar-glow"></div>
+    <!-- About Me Section -->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <!-- About me image -->
+                <div class="about-col-1">
+                    <img src="static/images/removalgrejoy2.png" alt="John Evans Okyere Profile">
                 </div>
-            </div>
-            <div class="about-modern-col-2">
-                <h1 class="sub-title animate__animated animate__fadeInLeft">About <span class="about-me-highlight">Me</span></h1>
-                <p class="about-modern-intro animate__animated animate__fadeInUp">
-                    Hi, I'm Evans — an <span class="about-me-accent">AI/ML Engineer</span> & <span class="about-me-accent">Data Scientist</span> who transforms complex data into clear, actionable solutions. With a blend of technical expertise, business insight, and relentless curiosity, I thrive at the intersection of AI, machine learning, and real-world impact.<br><br>
-                    I approach every project with a storyteller’s mindset: uncovering patterns, creating intuitive models, and building beautiful, interactive applications. Whether leading teams, architecting cloud solutions, or deploying AI systems, I believe in making data-driven innovation accessible, ethical, and impactful.<br><br>
-                    <span class="about-modern-quote">"Data, at its core, is a story waiting to be discovered."</span>
-                </p>
-                <div class="about-modern-tabs">
-                    <button class="about-tab-link active" onclick="openAboutTab(event, 'skills')"><i class="fa-solid fa-code"></i> Skills</button>
-                    <button class="about-tab-link" onclick="openAboutTab(event, 'experience')"><i class="fa-solid fa-briefcase"></i> Experience</button>
-                    <button class="about-tab-link" onclick="openAboutTab(event, 'education')"><i class="fa-solid fa-graduation-cap"></i> Education</button>
-                </div>
-                <div class="about-modern-tab-content about-modern-fade active" id="skills">
-                    <div class="about-skills-tags">
-                        <span>Python</span><span>JavaScript</span><span>Flask</span><span>Streamlit</span>
-                        <span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span>
-                        <span>LangChain</span><span>Hugging Face</span><span>SQL</span>
-                        <span>Power BI</span><span>Tableau</span><span>AWS</span><span>BigQuery</span>
+                
+                <!-- About me content -->
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    
+                    <!-- Personal introduction -->
+                    <p>I'm a passionate AI/ML Engineer and Data Scientist with expertise in building 
+                       intelligent systems that solve real-world problems. My journey in data science 
+                       has led me to develop solutions across healthcare, e-commerce, finance, and more.</p>
+                    
+                    <!-- Skills and expertise tags -->
+                    <div class="skills-tags">
+                        <span>Machine Learning</span><span>Python</span><span>Data Science</span><span>AI Chatbots</span>
+                        <span>Model Deployment</span><span>Data Visualization</span><span>SQL</span><span>FastAPI</span>
+                        <span>React</span><span>AWS</span><span>Tableau</span><span>Power BI</span>
                     </div>
-                    <ul class="about-skills-list">
-                        <li><b>Programming:</b> Python, JavaScript, SQL</li>
-                        <li><b>AI/ML:</b> Deep Learning, NLP, Generative AI, Model Deployment</li>
-                        <li><b>Visualization:</b> Tableau, Power BI, Excel</li>
-                        <li><b>Cloud:</b> AWS, GCP, Azure</li>
-                        <li><b>Web:</b> Flask, Streamlit, Responsive UI/UX</li>
-                    </ul>
-                </div>
-                <div class="about-modern-tab-content about-modern-fade" id="experience">
-                    <div class="about-timeline">
-                        <div class="about-timeline-item">
-                            <span class="about-timeline-dot"></span>
-                            <div>
-                                <h4>Data Analyst <span>@ Shaq Express-Ghana</span></h4>
-                                <span class="about-timeline-date">2024 - Present</span>
-                                <p>Leveraging data-driven insights to optimize logistics and customer experience for a leading Ghanaian startup.</p>
-                            </div>
-                        </div>
-                        <div class="about-timeline-item">
-                            <span class="about-timeline-dot"></span>
-                            <div>
-                                <h4>Branch Manager <span>@ Gysbin Pharmacy</span></h4>
-                                <span class="about-timeline-date">2020 - 2022</span>
-                                <p>Managed operations, led a diverse team, and implemented data solutions for business process improvement.</p>
-                            </div>
-                        </div>
-                        <div class="about-timeline-item">
-                            <span class="about-timeline-dot"></span>
-                            <div>
-                                <h4>Team Lead <span>@ Gysbin Pharmacy</span></h4>
-                                <span class="about-timeline-date">2018 - 2020</span>
-                                <p>Directed daily workflow and fostered a collaborative, customer-focused environment.</p>
-                            </div>
-                        </div>
+                    
+                    <!-- Detailed skills list -->
+                    <div class="skills-details">
+                        <h3>Core Competencies:</h3>
+                        <ul>
+                            <li><b>Machine Learning:</b> Scikit-learn, TensorFlow, PyTorch, XGBoost</li>
+                            <li><b>Chatbots:</b> Dialogflow, LangChain, Custom AI Assistants</li>
+                            <li><b>Data Analysis:</b> Pandas, NumPy, Statistical Analysis</li>
+                            <li><b>Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn</li>
+                            <li><b>Web Development:</b> FastAPI, Flask, React, HTML/CSS</li>
+                            <li><b>Cloud & DevOps:</b> AWS, Docker, Git, CI/CD</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="about-modern-tab-content about-modern-fade" id="education">
-                    <div class="about-education-list">
-                        <div class="about-education-item">
-                            <span class="about-edu-icon"><i class="fa-solid fa-university"></i></span>
-                            <div>
-                                <h4>BSc Computer Science</h4>
-                                <span class="about-edu-date">2021 - 2024</span>
-                            </div>
-                        </div>
-                        <div class="about-education-item">
-                            <span class="about-edu-icon"><i class="fa-brands fa-google"></i></span>
-                            <div>
-                                <h4>Google Data Analytics</h4>
-                                <span class="about-edu-date">Coursera</span>
-                            </div>
-                        </div>
-                        <div class="about-education-item">
-                            <span class="about-edu-icon"><i class="fa-brands fa-kaggle"></i></span>
-                            <div>
-                                <h4>Kaggle Machine Learning</h4>
-                                <span class="about-edu-date">Beginner & Intermediate</span>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <!-- Download CV button -->
+                    <a href="static/images/CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
             </div>
         </div>
-        
-    </div>        
-</div>
+    </div>
 
-    <!-- SERVICES SECTION: SLIDER/CAROUSEL -->
+    <!-- Services Section with Slider/Carousel -->
     <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
+            
+            <!-- Services slider wrapper -->
             <div class="services-slider-wrapper">
+                <!-- Left navigation arrow -->
                 <button class="slider-arrow left" id="services-left"><i class="fa-solid fa-chevron-left"></i></button>
+                
+                <!-- Services slider container -->
                 <div class="services-slider" id="services-slider">
+                    <!-- Service Card 1: Exploratory Data Analysis -->
                     <div class="service-card">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
                         <h2>Exploratory Data Analysis</h2>
                         <p>Uncover hidden trends and drive decisions with in-depth data exploration.</p>
                         <a href="eda.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 2: Machine Learning & AI -->
                     <div class="service-card">
                         <i class="fa-solid fa-brain"></i>
                         <h2>ML & AI Solutions</h2>
                         <p>Build, train, and deploy predictive models for automation and insight.</p>
                         <a href="machine.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 3: Natural Language Processing -->
                     <div class="service-card">
                         <i class="fa-solid fa-language"></i>
                         <h2>Natural Language Processing</h2>
                         <p>Create chatbots, perform text analysis, and automate language-based tasks.</p>
                         <a href="nlp.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 4: Data Visualization -->
                     <div class="service-card">
                         <i class="fa-solid fa-chart-line"></i>
                         <h2>Data Visualization</h2>
                         <p>Interactive dashboards and compelling visual reports in Tableau, Power BI & Excel.</p>
-                        <a href="#portfolio">See Examples</a>
+                        <a href="visual.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 5: Database & SQL -->
                     <div class="service-card">
                         <i class="fa-solid fa-database"></i>
                         <h2>Database & SQL</h2>
                         <p>Optimize, manage, and query data with MySQL, BigQuery, and advanced SQL.</p>
-                        <a href="#portfolio">See Projects</a>
+                        <a href="database.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 6: Web & AI Integration -->
                     <div class="service-card">
                         <i class="fa-solid fa-code"></i>
                         <h2>Web & AI Integration</h2>
                         <p>Develop and deploy AI-powered web apps using Flask, Streamlit, and Python.</p>
-                        <a href="#portfolio">See Apps</a>
+                        <a href="web.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 7: Cloud Deployment -->
                     <div class="service-card">
                         <i class="fa-brands fa-aws"></i>
                         <h2>Cloud Deployment</h2>
                         <p>Deploy scalable AI/ML solutions on AWS, Azure, and GCP for global access.</p>
-                        <a href="#portfolio">Cloud Work</a>
+                        <a href="cloud.html" target="_blank">Learn More</a>
                     </div>
+                    
+                    <!-- Service Card 8: AI Chatbot Development -->
                     <div class="service-card">
                         <i class="fa-solid fa-robot"></i>
                         <h2>AI Chatbot Development</h2>
                         <p>Automate support and engagement with smart, conversational bots.</p>
-                        <a href="#portfolio">Chatbots</a>
+                        <a href="chatbot.html" target="_blank">Learn More</a>
                     </div>
                 </div>
+                
+                <!-- Right navigation arrow -->
                 <button class="slider-arrow right" id="services-right"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
     </div>
 
-    <!-- PORTFOLIO SECTION: RESPONSIVE/FANCY -->
+    <!-- Portfolio Section with Project Showcase -->
     <div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="portfolio-modern-grid">
-            <!-- Example Project Card 1 -->
-            <div class="portfolio-modern-card">
-                <div class="portfolio-modern-image">
-                    <img src="static/images/vanna-removebg-preview.png" alt="Vanna AI", loading="lazy">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            
+            <!-- Portfolio grid for project cards -->
+            <div class="portfolio-modern-grid">
+                <!-- Project 1: Heart Disease Prediction -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/heart_di-removebg-preview.png" alt="Heart Disease Prediction" loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Deployable Heart Diseases Prediction</h3>
+                        <p class="portfolio-tags"><span>AI</span> <span>Flask</span> <span>Healthcare</span></p>
+                        <p class="portfolio-desc">A web app for predicting heart disease risk using machine learning, built with Flask and fully deployable for real-world use.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-modern-body">
-                    <h3>Vanna AI</h3>
-                    <p class="portfolio-tags"><span>AI</span> <span>Natural Language</span> <span>Database</span></p>
-                    <p class="portfolio-desc">AI-powered tool that allows users to query databases with natural language.</p>
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                
+                <!-- Project 2: Ghana AI Doctor Agent -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/doctor-removebg-preview.png" alt="Ghana AI Doctor Agent" loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Ghana AI Doctor Agent</h3>
+                        <p class="portfolio-tags"><span>AI</span> <span>Healthcare</span> <span>FastAPI</span> <span>React</span></p>
+                        <p class="portfolio-desc">A professional-grade AI medical consultation system tailored for Ghana, featuring Dr. Kwame Asante (Korle Bu Teaching Hospital). Combines FastAPI, Google Gemini 2.0, MongoDB, and a modern React UI for secure, culturally relevant medical guidance.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Bank Subscription Campaign Prediction -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/banck-removebg-preview.png" alt="Bank Subscription Prediction" loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Bank Subscription Campaign Prediction</h3>
+                        <p class="portfolio-tags"><span>ML</span> <span>Banking</span> <span>Prediction</span></p>
+                        <p class="portfolio-desc">A machine learning pipeline to predict customer subscription to term deposits based on direct marketing data. Includes advanced preprocessing, feature engineering, and production-ready deployment.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Shaq App Chatbot -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/bot_app-removebg-preview.png" alt="Shaq App Chatbot" loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Shaq App Chatbot</h3>
+                        <p class="portfolio-tags"><span>Chatbot</span> <span>E-commerce</span> <span>FAQ</span></p>
+                        <p class="portfolio-desc">A smart FAQ chatbot for Shaq App, a leading e-commerce company in Ghana. Automates customer support and answers common questions in real time.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Gysbin Pharmacy POS System -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/pharma-removebg-preview.png" alt="Gysbin Pharmacy POS System" loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Gysbin Pharmacy POS System</h3>
+                        <p class="portfolio-tags"><span>POS</span> <span>Pharmacy</span> <span>FastAPI</span> <span>React</span></p>
+                        <p class="portfolio-desc">A modern, full-stack Point of Sale system for pharmacies in Ghana. Built with FastAPI, React, and Electron for cross-platform desktop deployment.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: E-Commerce Churn Prediction -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/churn-removebg-preview.png" alt="E-Commerce Churn Prediction" loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>E-Commerce Churn Prediction</h3>
+                        <p class="portfolio-tags"><span>ML</span> <span>E-commerce</span> <span>Churn</span></p>
+                        <p class="portfolio-desc">Predicts customer churn for e-commerce platforms by analyzing complaints, satisfaction, device usage, and more. Built as a deep-dive learning project using Scikit-learn, FreeCodeCamp, DataCamp, and more.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7: Vanna AI -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/vanna-removebg-preview.png" alt="Vanna AI", loading="lazy">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Vanna AI</h3>
+                        <p class="portfolio-tags"><span>AI</span> <span>Natural Language</span> <span>Database</span></p>
+                        <p class="portfolio-desc">AI-powered tool that allows users to query databases with natural language.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8: Booking Bot -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/bot_app-removebg-preview.png" alt="Ticket Bot">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Booking Bot</h3>
+                        <p class="portfolio-tags"><span>Chatbot</span> <span>Automation</span></p>
+                        <p class="portfolio-desc">AI-driven bot for booking tickets and scheduling appointments with conversational UI.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9: Expense Tracker -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/expense_tracker-removebg-preview.png" alt="Expense Tracker">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>Expense Tracker</h3>
+                        <p class="portfolio-tags"><span>Streamlit</span> <span>Finance</span></p>
+                        <p class="portfolio-desc">A simple yet powerful expense tracker built with Streamlit for personal budgeting.</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 10: RAG PDF Chat -->
+                <div class="portfolio-modern-card">
+                    <div class="portfolio-modern-image">
+                        <img src="static/images/ragchat-removebg-preview.png" alt="RAG PDF Chat">
+                    </div>
+                    <div class="portfolio-modern-body">
+                        <h3>RAG PDF Chat</h3>
+                        <p class="portfolio-tags"><span>RAG</span> <span>Streamlit</span></p>
+                        <p class="portfolio-desc">Chatbot with PDF support (Streamlit + Ollama DeepSeek).</p>
+                        <div class="portfolio-links">
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Example Project Card 2 -->
-            <div class="portfolio-modern-card">
-                <div class="portfolio-modern-image">
-                    <img src="images/bot.png" alt="Ticket Bot">
-                </div>
-                <div class="portfolio-modern-body">
-                    <h3>Booking Bot</h3>
-                    <p class="portfolio-tags"><span>Chatbot</span> <span>Automation</span></p>
-                    <p class="portfolio-desc">AI-driven bot for booking tickets and scheduling appointments with conversational UI.</p>
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Example Project Card 3 -->
-            <div class="portfolio-modern-card">
-                <div class="portfolio-modern-image">
-                    <img src="images/expense_tracker.png" alt="Expense Tracker">
-                </div>
-                <div class="portfolio-modern-body">
-                    <h3>Expense Tracker</h3>
-                    <p class="portfolio-tags"><span>Streamlit</span> <span>Finance</span></p>
-                    <p class="portfolio-desc">A simple yet powerful expense tracker built with Streamlit for personal budgeting.</p>
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Example Project Card 4 -->
-            <div class="portfolio-modern-card">
-                <div class="portfolio-modern-image">
-                    <img src="images/irisflowers.png" alt="Iris Prediction">
-                </div>
-                <div class="portfolio-modern-body">
-                    <h3>Iris Flower Prediction</h3>
-                    <p class="portfolio-tags"><span>ML</span> <span>Classification</span></p>
-                    <p class="portfolio-desc">Machine learning model using RandomForestClassifier to predict iris species.</p>
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Example Project Card 5 -->
-            <div class="portfolio-modern-card">
-                <div class="portfolio-modern-image">
-                    <img src="images/ragchat.png" alt="RAG PDF Chat">
-                </div>
-                <div class="portfolio-modern-body">
-                    <h3>RAG PDF Chat</h3>
-                    <p class="portfolio-tags"><span>RAG</span> <span>Streamlit</span></p>
-                    <p class="portfolio-desc">Chatbot with PDF support (Streamlit + Ollama DeepSeek).</p>
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#" target="_blank" class="portfolio-link-btn"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Continue adding more project cards as needed -->
-        </div>
-        <a href="https://github.com/JohnEvansOkyere" class="btn portfolio-btn" target="_blank">See More on GitHub</a>
-    </div>
-</div>
-
-
-<!-- ...after portfolio section, before MLflow pipeline or contact... -->
-<section id="case-studies" class="case-studies-section">
-  <div class="container">
-    <h2 class="section-title">Case Studies & Success Stories</h2>
-    <div class="case-studies-grid">
-      <div class="case-study-card">
-        <img src="images/ecommerce_before_after.webp" alt="Before and After E-commerce Dashboard" />
-        <h3>E-commerce Sales Uplift</h3>
-        <p>How data-driven optimization increased monthly sales by 28%.</p>
-        <a href="case-ecommerce.html" class="btn case-study-btn">Read Case Study</a>
-      </div>
-      <div class="case-study-card">
-        <img src="images/road_safety_dashboard.webp" alt="Road Safety Dashboard" />
-        <h3>Road Safety Analytics</h3>
-        <p>Used ML & BI dashboards to reduce accident rates by 17% in one year.</p>
-        <a href="case-road-safety.html" class="btn case-study-btn">Read Case Study</a>
-      </div>
-      <!-- Add more cards as needed -->
-    </div>
-  </div>
-
-
-  <!-- Inside your portfolio or case study card -->
-<a href="https://bank-subscription-prediction-3ftwqfyndo7o2nwtuywwvt.streamlit.app/" class="btn demo-btn" target="_blank" rel="noopener">
-  <i class="fa-solid fa-play"></i> Try it Live
-</a>
-<iframe src="https://bank-subscription-prediction-3ftwqfyndo7o2nwtuywwvt.streamlit.app/" class="demo-iframe" title="Demo App" loading="lazy"></iframe>
-</section>
-    
-
-<!-- ...after portfolio section, before contact section... -->
-<section id="mlops-pipeline" class="mlops-pipeline-section">
-  <div class="container mlops-pipeline-container">
-    <h2 class="mlops-pipeline-title">How My MLOps Pipeline Works</h2>
-    <p class="mlops-pipeline-desc">
-      From raw data to deployed AI – see how your project moves through each stage of the machine learning lifecycle.
-    </p>
-    <div class="mlops-pipeline-visual-wrapper">
-      <div class="mlops-pipeline-visual">
-        <!-- Pipeline stages -->
-        <div class="mlops-stage" style="--step:1">
-          <div class="mlops-icon"><i class="fa-solid fa-database"></i></div>
-          <span>Data Collection</span>
-        </div>
-        <div class="mlops-stage" style="--step:2">
-          <div class="mlops-icon"><i class="fa-solid fa-broom"></i></div>
-          <span>Data Cleaning</span>
-        </div>
-        <div class="mlops-stage" style="--step:3">
-          <div class="mlops-icon"><i class="fa-solid fa-chart-simple"></i></div>
-          <span>EDA</span>
-        </div>
-        <div class="mlops-stage" style="--step:4">
-          <div class="mlops-icon"><i class="fa-solid fa-gears"></i></div>
-          <span>Feature Engineering</span>
-        </div>
-        <div class="mlops-stage" style="--step:5">
-          <div class="mlops-icon"><i class="fa-solid fa-flask"></i></div>
-          <span>Model Training</span>
-        </div>
-        <div class="mlops-stage" style="--step:6">
-          <div class="mlops-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-          <span>Validation</span>
-        </div>
-        <div class="mlops-stage" style="--step:7">
-          <div class="mlops-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-          <span>Deployment</span>
-        </div>
-        <div class="mlops-stage" style="--step:8">
-          <div class="mlops-icon"><i class="fa-solid fa-bolt"></i></div>
-          <span>Real-time Prediction</span>
-        </div>
-        <!-- Animated ball/particle -->
-        <div class="mlops-flow-dot" id="mlops-flow-dot" aria-label="ML Pipeline Data"></div>
-        <!-- SVG pipeline arrow line (for visual connection) -->
-        <svg class="mlops-pipeline-svg" viewBox="0 0 890 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polyline points="35,40 120,40 200,40 280,40 370,40 470,40 570,40 680,40 820,40" stroke="#ffe600" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <span class="mlops-pipeline-note">Scroll to see the flow in action</span>
-    </div>
-  </div>
-</section>
-
-
-    <!-- CONTACT SECTION -->
-<!-- ... (other parts of your HTML remain unchanged) ... -->
-<div id="contact">
-    <div class="container">
-        <div class="row contact-row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i> johnevansokyere@gmail.com</p>
-                <p><i class="fa-solid fa-phone-volume"></i> +233544954643</p>
-                <div class="social-icons">
-                    <a href="https://wa.me/message/L3UFDFW5H2DTM1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/JohnEvansOkyere" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://x.com/Evansdatascient" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-                <a href="cv.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
-                        <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
-                        <div class="input-error" id="error-name"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email"><i class="fa-solid fa-envelope"></i> Your Email</label>
-                        <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
-                        <div class="input-error" id="error-email"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject"><i class="fa-solid fa-pen"></i> Subject</label>
-                        <input type="text" id="subject" name="Subject" placeholder="Message subject" required>
-                        <div class="input-error" id="error-subject"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message"><i class="fa-solid fa-message"></i> Your Message</label>
-                        <textarea name="Message" id="message" rows="6" placeholder="Write your message here" required></textarea>
-                        <div class="input-error" id="error-message"></div>
-                    </div>
-                    <div class="form-footer">
-                        <button type="submit" class="btn btn2" id="submitBtn">
-                            <span id="submitText">Submit</span>
-                            <span id="submitSpinner" style="display:none;"><i class="fa fa-spinner fa-spin"></i></span>
-                        </button>
-                        <span id="formStatus"></span>
-                    </div>
-                </form>
-                <p id="successMessage" style="display:none; color:green; font-weight:bold; margin-top:20px;">
-                    <i class="fa fa-check-circle"></i> Message Sent! Thank you for contacting me.
-                </p>
-            </div>
+            
+            <!-- View more projects button -->
+            <a href="https://github.com/JohnEvansOkyere" class="btn portfolio-btn" target="_blank">See More on GitHub</a>
         </div>
     </div>
-</div>
-<!-- ... (footer and other sections remain unchanged) ... -->
-    <!-- ...other sections... -->
-<footer class="footer-modern">
-    <div class="container footer-modern-container">
-        <div class="footer-main-row">
-            <div class="footer-brand">
-                <img src="images/banner.png" alt="Logo" class="footer-logo">
-                <div>
-                    <h2>John Evans Okyere</h2>
-                    <p class="footer-title-desc">AI/ML Engineer & Data Scientist</p>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies-section">
+        <div class="container">
+            <h2 class="section-title">Case Studies & Success Stories</h2>
+            
+            <!-- Case studies grid -->
+            <div class="case-studies-grid">
+                <!-- Case Study 1: E-commerce Sales Uplift -->
+                <div class="case-study-card">
+                    <img src="static/images/expense_tracker-removebg-preview.png" alt="Before and After E-commerce Dashboard" />
+                    <h3>E-commerce Sales Uplift</h3>
+                    <p>How data-driven optimization increased monthly sales by 28%.</p>
+                    <a href="case-ecommerce.html" class="btn case-study-btn">Read Case Study</a>
                 </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-socials">
-                <h4>Connect</h4>
-                <div class="footer-social-icons">
-                    <a href="https://github.com/JohnEvansOkyere" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com/Evansdatascient" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/L3UFDFW5H2DTM1" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-                <a href="cv.pdf" download class="footer-cv-btn"><i class="fa-solid fa-cloud-arrow-down"></i> Download CV</a>
             </div>
         </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom-row">
-            <span>&copy; <span id="year"></span> John Evans Okyere. All Rights Reserved.</span>
-            <span>Made with <i class="fa-solid fa-heart"></i> in Ghana</span>
+    </section>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <!-- Contact information -->
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    
+                    <!-- Contact details -->
+                    <p><i class="fa-solid fa-envelope"></i>johnevansokyere@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>+233544954643</p>
+                    
+                    <!-- Social media links -->
+                    <div class="social-icons">
+                        <a href="https://wa.me/message/L3UFDFW5H2DTM1"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/JohnEvansOkyere"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/Evansdatascient"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    
+                    <!-- Download CV button -->
+                    <a href="static/images/CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                
+                <!-- Contact form -->
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg">Sent successfully</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright notice -->
+        <div class="copyright">
+            <p>Copyright @ John. Made with <i class="fa-solid fa-heart"></i> by John Evans Okyere</p>
         </div>
     </div>
-</footer>
+
+    <!-- Professional Dialogflow Chatbot Integration -->
+    <div id="chatbot-widget">
+        <!-- Chatbot status indicator -->
+        <div class="chatbot-status-indicator" id="chatbot-status">
+            <i class="fa-solid fa-circle"></i>
+            <span>AI Assistant Ready</span>
+        </div>
+        
+        <!-- Chatbot floating action button -->
+        <div id="chatbot-fab" onclick="toggleChatbot()">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+        
+        <!-- Chatbot iframe container -->
+        <div id="chatbot-frame-wrapper" style="display: none;">
+            <div id="chatbot-close" onclick="toggleChatbot()">
+                <i class="fa-solid fa-times"></i>
+            </div>
+            <iframe id="chatbot-iframe" 
+                    src="https://console.dialogflow.com/api-client/demo/embedded/your-bot-id"
+                    width="350" 
+                    height="500">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Floating Chatbot Welcome Tooltip -->
+    <div id="chatbot-tooltip" style="display: flex; align-items: center; position: fixed; bottom: 110px; right: 40px; z-index: 99999; background: #fff; color: #222; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); padding: 12px 16px; font-size: 14px; max-width: 200px; animation: fadeIn 0.5s ease-in-out;">
+        <i class="fa-solid fa-lightbulb" style="color: #ffd700; margin-right: 8px;"></i>
+        <span>Need help? Ask me anything about my services!</span>
+    </div>
+
+    <!-- JavaScript file for interactive functionality -->
     <script src="static/script.js"></script>
 </body>
 </html>
