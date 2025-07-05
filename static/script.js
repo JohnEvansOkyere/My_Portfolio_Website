@@ -1,5 +1,3 @@
-// Typing effect for hero section
-// Rotates through different job titles with a typing animation
 const typed_texts = [
     "an AI/ML Engineer.",
     "a Data Scientist.",
@@ -8,14 +6,17 @@ const typed_texts = [
 ];
 let typedIndex = 0, charIndex = 0, typing = true;
 const typedSpan = document.querySelector('.typed');
+
 function typeEffect() {
+    if (!typedSpan) return;
+    
     if (typing) {
         if (charIndex < typed_texts[typedIndex].length) {
             typedSpan.textContent += typed_texts[typedIndex][charIndex++];
             setTimeout(typeEffect, 85);
         } else {
             typing = false;
-            setTimeout(typeEffect, 1200);
+            setTimeout(typeEffect, 1500);
         }
     } else {
         if (charIndex > 0) {
@@ -24,14 +25,19 @@ function typeEffect() {
         } else {
             typing = true;
             typedIndex = (typedIndex + 1) % typed_texts.length;
-            setTimeout(typeEffect, 420);
+            setTimeout(typeEffect, 500);
         }
     }
 }
-if (typedSpan) typeEffect();
 
-// Tab navigation for About section
-// Switches between tabs (e.g., Skills, Experience)
+// Initialize typing effect when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    if (typedSpan) {
+        // Add a small delay to ensure smooth start
+        setTimeout(typeEffect, 1000);
+    }
+});
+
 const tablinks = document.getElementsByClassName('tab-links');
 const tabcontents = document.getElementsByClassName('tab-contents');
 function opentab(tabname){
@@ -41,8 +47,22 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add('active-tab');
 }
 
-// Modern Navbar: Toggle for mobile
-// Handles opening/closing the mobile menu and highlighting nav links
+function toggleChatbot() {
+    const wrapper = document.getElementById('chatbot-frame-wrapper');
+    const tooltip = document.getElementById('chatbot-tooltip');
+    
+    if (wrapper.style.display === 'none') {
+        wrapper.style.display = 'block';
+        wrapper.style.animation = 'chatbot-pop 0.3s ease-out';
+        if (tooltip) tooltip.style.display = 'none';
+    } else {
+        wrapper.style.display = 'none';
+        if (tooltip) tooltip.style.display = 'flex';
+    }
+}
+
+function openmenu() { sidemenu.style.right = "0"; }
+function closemenu() { sidemenu.style.right = "-210px"; }
 document.addEventListener("DOMContentLoaded", function () {
     const navbarToggle = document.getElementById('navbar-toggle');
     const sidemenu = document.getElementById('sidemenu');

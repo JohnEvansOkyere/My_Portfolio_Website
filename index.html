@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for SEO and responsive design -->
     <title>John Evans Okyere - AI/ML Engineer & Data Scientist</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AI/ML Engineer and Data Scientist specializing in machine learning, data visualization, and AI chatbot development">
-    
-    <!-- External CSS and Font Awesome for icons -->
     <link rel="stylesheet" href="static/style.css">
     <script src="https://kit.fontawesome.com/902a6c5eb1.js"></script>
-    
-    <!-- Google Analytics tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,99 +17,143 @@
 </head>
 <body>
 
-    <!-- Main Navigation Bar -->
     <nav class="navbar-modern">
         <div class="navbar-brand">
-            <!-- Logo and brand name -->
             <img src="static/images/Black___White_Modern_Minimalist_Data_Analyst_LinkedIn_Banner__1_-removebg-preview.png" class="logo" alt="John Evans Okyere Logo">
             <span class="navbar-title">John Evans Okyere</span>
         </div>
-        
-        <!-- Navigation menu items -->
         <ul id="sidemenu" class="navbar-links">
             <li><a href="#header" class="nav-link">Home</a></li>
             <li><a href="#About" class="nav-link">About</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
             <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
-            <!-- Close button for mobile menu -->
             <li class="navbar-close-btn">
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </li>
         </ul>
-        
-        <!-- Mobile menu toggle button -->
         <button class="navbar-toggle" id="navbar-toggle" aria-label="Open navigation menu">
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
 
-    <!-- Hero Section with main introduction -->
     <div id="header">
-        <div class="container">
-            <div class="header-text">
-                <!-- Main heading and title -->
-                <h1>Hi, I'm <span class="name">John Evans Okyere</span></h1>
-                <h2>AI/ML Engineer & Data Scientist</h2>
-                
-                <!-- Brief description of services -->
-                <p>Transforming data into actionable insights through machine learning, 
-                   AI chatbots, and advanced analytics. Building intelligent solutions 
-                   that drive business growth and innovation.</p>
-                
-                <!-- Call-to-action buttons -->
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn hero-btn">View My Work</a>
-                    <a href="#contact" class="btn hero-btn secondary">Get In Touch</a>
+        <div class="header-bg">
+            <div class="header-shape"></div>
+            <div class="header-shape2"></div>
+        </div>
+        <div class="header-container">
+            <div class="header-main">
+                <div class="header-text">
+                    <div class="subtitle">Welcome to my portfolio</div>
+                    <h1>
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="highlight">John Evans Okyere</span>
+                    </h1>
+                    <div class="typed"></div>
+                    <div class="header-bio">
+                        Transforming data into actionable insights through machine learning, 
+                        AI chatbots, and advanced analytics. Building intelligent solutions 
+                        that drive business growth and innovation.
+                    </div>
+                    <a href="#contact" class="btn hero-btn">Contact Me</a>
+                    <div class="header-socials">
+                        <a href="https://wa.me/message/L3UFDFW5H2DTM1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/JohnEvansOkyere" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/Evansdatascient" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Hero image -->
-            <div class="header-image">
-                <img src="static/images/IMG_1884-removebg-preview.png" alt="John Evans Okyere" class="hero-img">
+           
             </div>
         </div>
     </div>
 
-    <!-- About Me Section -->
-    <div id="About">
+    <div id="About" class="about-modern-container">
         <div class="container">
-            <div class="row">
-                <!-- About me image -->
-                <div class="about-col-1">
-                    <img src="static/images/removalgrejoy2.png" alt="John Evans Okyere Profile">
+            <div class="about-modern-row">
+                <div class="about-modern-col-1">
+                    <div class="about-avatar-wrapper">
+                        <div class="about-avatar-glow"></div>
+                        <img src="static/images/removalgrejoy2.png" alt="John Evans Okyere Profile" class="about-avatar">
+                    </div>
                 </div>
-                
-                <!-- About me content -->
-                <div class="about-col-2">
+                <div class="about-modern-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    
-                    <!-- Personal introduction -->
-                    <p>I'm a passionate AI/ML Engineer and Data Scientist with expertise in building 
-                       intelligent systems that solve real-world problems. My journey in data science 
-                       has led me to develop solutions across healthcare, e-commerce, finance, and more.</p>
-                    
-                    <!-- Skills and expertise tags -->
-                    <div class="skills-tags">
-                        <span>Machine Learning</span><span>Python</span><span>Data Science</span><span>AI Chatbots</span>
-                        <span>Model Deployment</span><span>Data Visualization</span><span>SQL</span><span>FastAPI</span>
-                        <span>React</span><span>AWS</span><span>Tableau</span><span>Power BI</span>
+                    <div class="about-modern-tabs">
+                        <button class="about-tab-link active" onclick="openAboutTab(event, 'about-tab')">About Me</button>
+                        <button class="about-tab-link" onclick="openAboutTab(event, 'education-tab')">Education</button>
+                        <button class="about-tab-link" onclick="openAboutTab(event, 'experience-tab')">Experience</button>
                     </div>
-                    
-                    <!-- Detailed skills list -->
-                    <div class="skills-details">
-                        <h3>Core Competencies:</h3>
-                        <ul>
-                            <li><b>Machine Learning:</b> Scikit-learn, TensorFlow, PyTorch, XGBoost</li>
-                            <li><b>Chatbots:</b> Dialogflow, LangChain, Custom AI Assistants</li>
-                            <li><b>Data Analysis:</b> Pandas, NumPy, Statistical Analysis</li>
-                            <li><b>Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn</li>
-                            <li><b>Web Development:</b> FastAPI, Flask, React, HTML/CSS</li>
-                            <li><b>Cloud & DevOps:</b> AWS, Docker, Git, CI/CD</li>
-                        </ul>
+                    <div id="about-tab" class="about-modern-tab-content active">
+                        <div class="about-modern-intro">
+                            I'm a passionate AI/ML Engineer and Data Scientist with expertise in building intelligent systems that solve real-world problems. My journey in data science has led me to develop solutions across healthcare, e-commerce, finance, and more.
+                        </div>
+                        <div class="about-skills-tags">
+                            <span>Machine Learning</span><span>Python</span><span>Data Science</span><span>AI Chatbots</span>
+                            <span>Model Deployment</span><span>Data Visualization</span><span>SQL</span><span>FastAPI</span>
+                            <span>React</span><span>AWS</span><span>Tableau</span><span>Power BI</span>
+                        </div>
+                        <div class="about-skills-list">
+                            <h3>Core Competencies:</h3>
+                            <ul>
+                                <li><b>Machine Learning:</b> Scikit-learn, TensorFlow, PyTorch, XGBoost</li>
+                                <li><b>Chatbots:</b> Dialogflow, LangChain, Custom AI Assistants</li>
+                                <li><b>Data Analysis:</b> Pandas, NumPy, Statistical Analysis</li>
+                                <li><b>Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn</li>
+                                <li><b>Web Development:</b> FastAPI, Flask, React, HTML/CSS</li>
+                                <li><b>Cloud & DevOps:</b> AWS, Docker, Git, CI/CD</li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <!-- Download CV button -->
+                    <div id="education-tab" class="about-modern-tab-content">
+                        <div class="about-education-list">
+                            <div class="about-education-item">
+                                <div class="about-edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <h4>BSc. Computer Science <span>- KNUST</span></h4>
+                                    <div class="about-edu-date">2017 - 2021</div>
+                                    <div>Specialized in AI, Data Science, and Software Engineering.</div>
+                                </div>
+                            </div>
+                            <div class="about-education-item">
+                                <div class="about-edu-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div>
+                                    <h4>Professional Certificates</h4>
+                                    <div class="about-edu-date">2021 - Present</div>
+                                    <div>Machine Learning (Coursera), Data Visualization (DataCamp), AWS Cloud Practitioner, and more.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="experience-tab" class="about-modern-tab-content">
+                        <div class="about-timeline">
+                            <div class="about-timeline-item">
+                                <div class="about-timeline-dot"></div>
+                                <div>
+                                    <h4>Freelance AI/ML Engineer <span>@ Various Clients</span></h4>
+                                    <div class="about-timeline-date">2022 - Present</div>
+                                    <p>Developing machine learning models, AI chatbots, and data science solutions for healthcare, e-commerce, and finance clients. Specializing in predictive analytics and automated systems.</p>
+                                </div>
+                            </div>
+                            <div class="about-timeline-item">
+                                <div class="about-timeline-dot"></div>
+                                <div>
+                                    <h4>Data Science Projects <span>@ Personal Portfolio</span></h4>
+                                    <div class="about-timeline-date">2021 - Present</div>
+                                    <p>Building comprehensive data science projects including heart disease prediction, churn analysis, and AI chatbot development. Focused on end-to-end ML pipelines and deployment.</p>
+                                </div>
+                            </div>
+                            <div class="about-timeline-item">
+                                <div class="about-timeline-dot"></div>
+                                <div>
+                                    <h4>Software Engineering Intern <span>@ Gysbin Pharmacy POS</span></h4>
+                                    <div class="about-timeline-date">2020</div>
+                                    <p>Developed a cross-platform Point of Sale system for pharmacies using FastAPI, React, and Electron. Implemented inventory management and sales tracking features.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a href="static/images/CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
             </div>
@@ -125,71 +164,51 @@
     <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
-            
-            <!-- Services slider wrapper -->
             <div class="services-slider-wrapper">
-                <!-- Left navigation arrow -->
                 <button class="slider-arrow left" id="services-left"><i class="fa-solid fa-chevron-left"></i></button>
-                
-                <!-- Services slider container -->
                 <div class="services-slider" id="services-slider">
-                    <!-- Service Card 1: Exploratory Data Analysis -->
                     <div class="service-card">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
                         <h2>Exploratory Data Analysis</h2>
                         <p>Uncover hidden trends and drive decisions with in-depth data exploration.</p>
                         <a href="eda.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 2: Machine Learning & AI -->
                     <div class="service-card">
                         <i class="fa-solid fa-brain"></i>
                         <h2>ML & AI Solutions</h2>
                         <p>Build, train, and deploy predictive models for automation and insight.</p>
                         <a href="machine.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 3: Natural Language Processing -->
                     <div class="service-card">
                         <i class="fa-solid fa-language"></i>
                         <h2>Natural Language Processing</h2>
                         <p>Create chatbots, perform text analysis, and automate language-based tasks.</p>
                         <a href="nlp.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 4: Data Visualization -->
                     <div class="service-card">
                         <i class="fa-solid fa-chart-line"></i>
                         <h2>Data Visualization</h2>
                         <p>Interactive dashboards and compelling visual reports in Tableau, Power BI & Excel.</p>
                         <a href="visual.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 5: Database & SQL -->
                     <div class="service-card">
                         <i class="fa-solid fa-database"></i>
                         <h2>Database & SQL</h2>
                         <p>Optimize, manage, and query data with MySQL, BigQuery, and advanced SQL.</p>
                         <a href="database.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 6: Web & AI Integration -->
                     <div class="service-card">
                         <i class="fa-solid fa-code"></i>
                         <h2>Web & AI Integration</h2>
                         <p>Develop and deploy AI-powered web apps using Flask, Streamlit, and Python.</p>
                         <a href="web.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 7: Cloud Deployment -->
                     <div class="service-card">
                         <i class="fa-brands fa-aws"></i>
                         <h2>Cloud Deployment</h2>
                         <p>Deploy scalable AI/ML solutions on AWS, Azure, and GCP for global access.</p>
                         <a href="cloud.html" target="_blank">Learn More</a>
                     </div>
-                    
-                    <!-- Service Card 8: AI Chatbot Development -->
                     <div class="service-card">
                         <i class="fa-solid fa-robot"></i>
                         <h2>AI Chatbot Development</h2>
@@ -197,8 +216,6 @@
                         <a href="chatbot.html" target="_blank">Learn More</a>
                     </div>
                 </div>
-                
-                <!-- Right navigation arrow -->
                 <button class="slider-arrow right" id="services-right"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
@@ -395,31 +412,21 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <div id="contact">
         <div class="container">
-            <div class="row">
-                <!-- Contact information -->
+            <div class="row contact-row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    
-                    <!-- Contact details -->
                     <p><i class="fa-solid fa-envelope"></i>johnevansokyere@gmail.com</p>
                     <p><i class="fa-solid fa-phone-volume"></i>+233544954643</p>
-                    
-                    <!-- Social media links -->
                     <div class="social-icons">
                         <a href="https://wa.me/message/L3UFDFW5H2DTM1"><i class="fa-brands fa-whatsapp"></i></a>
                         <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/JohnEvansOkyere"><i class="fa-brands fa-github"></i></a>
                         <a href="https://x.com/Evansdatascient"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
-                    
-                    <!-- Download CV button -->
                     <a href="static/images/CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                
-                <!-- Contact form -->
                 <div class="contact-right">
                     <form>
                         <input type="text" name="Name" placeholder="Your Name" required>
@@ -430,11 +437,6 @@
                     <span id="msg">Sent successfully</span>
                 </div>
             </div>
-        </div>
-        
-        <!-- Copyright notice -->
-        <div class="copyright">
-            <p>Copyright @ John. Made with <i class="fa-solid fa-heart"></i> by John Evans Okyere</p>
         </div>
     </div>
 
@@ -472,5 +474,42 @@
 
     <!-- JavaScript file for interactive functionality -->
     <script src="static/script.js"></script>
+
+    <!-- Modern Footer -->
+    <footer class="footer-modern">
+        <div class="footer-modern-container container">
+            <div class="footer-main-row">
+                <div class="footer-brand">
+                    <img src="static/images/Black___White_Modern_Minimalist_Data_Analyst_LinkedIn_Banner__1_-removebg-preview.png" class="footer-logo" alt="John Evans Okyere Logo">
+                    <h2>John Evans Okyere</h2>
+                    <div class="footer-title-desc">AI/ML Engineer & Data Scientist<br>Building intelligent solutions for business growth.</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-socials">
+                    <h4>Connect</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://wa.me/message/L3UFDFW5H2DTM1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/john-evans-okyere-4a1480214/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/JohnEvansOkyere" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/Evansdatascient" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a href="static/images/CV.pdf" download class="footer-cv-btn"><i class="fa-solid fa-download"></i> Download CV</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom-row">
+                <span>&copy; <span id="year"></span> John Evans Okyere. Made with <i class="fa-solid fa-heart"></i> by John Evans Okyere</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
